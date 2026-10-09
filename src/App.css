@@ -1,0 +1,151 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #24452e;
+  background: #f7faf5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 5%;
+  background: white;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #2d7042;
+  color: white;
+}
+
+button:hover {
+  background: #1f512f;
+}
+
+.landing-page {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(#102b1c80, #102b1c80),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=80")
+    center / cover no-repeat;
+}
+
+.landing-content {
+  max-width: 650px;
+}
+
+.landing-content h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  margin: 18px 0;
+}
+
+.landing-content p {
+  line-height: 1.7;
+}
+
+.get-started-btn {
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: #e4f0d8;
+  color: #24452e;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  gap: 22px;
+  padding: 25px 0;
+}
+
+.product-card {
+  padding: 16px;
+  background: white;
+  border: 1px solid #e1e9de;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000008;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e4eee1;
+}
+
+.product-card h2,
+.product-card h3 {
+  margin-bottom: 8px;
+}
+
+.cart-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dce5d9;
+}
+
+.about-us,
+main:not(.landing-page) {
+  padding: 30px 5%;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 5%;
+  background: white;
+  color: #526b56;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landing-page {
+    min-height: 70vh;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
